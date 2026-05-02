@@ -108,3 +108,120 @@ For each STRIDE category (Spoofing, Tampering, Repudiation, Information Disclosu
 
 Output as a structured threat model table.
 ```
+
+---
+
+## 6. Generate API Security Test Cases
+
+```
+Generate security-focused test cases for the following API.
+
+API details:
+- Base URL: [endpoint]
+- Auth: [Bearer token / API key / OAuth]
+- Key endpoints: [list them]
+
+Cover:
+- Missing or invalid auth tokens (401 responses)
+- Expired tokens not accepted
+- Tokens from other users rejected (IDOR)
+- Mass assignment vulnerabilities (sending extra fields)
+- HTTP method tampering (GET instead of POST, etc.)
+- Sensitive data in responses (tokens, passwords, PII not exposed)
+- Rate limiting on sensitive endpoints (login, password reset)
+- Insecure direct object references (accessing other users' resources)
+- Verbose error messages leaking stack traces or DB info
+- CORS misconfiguration
+```
+
+---
+
+## 7. Write a Penetration Test Checklist for a Web App
+
+```
+Create a manual penetration testing checklist for the following web application.
+
+Application:
+[Describe the app, its features, and user roles]
+
+Organise the checklist by:
+- Reconnaissance (information gathering)
+- Authentication testing
+- Session management
+- Input validation (XSS, SQLi, XXE, SSTI)
+- Business logic flaws
+- Access control (IDOR, privilege escalation)
+- Sensitive data exposure
+- Security headers and TLS configuration
+- Third-party components and dependencies
+- File upload and download security
+
+For each item: description, how to test it, and what a vulnerability looks like.
+```
+
+---
+
+## 8. Review Infrastructure Config for Security Issues
+
+```
+Review the following infrastructure or deployment configuration for security vulnerabilities.
+
+Config:
+[Paste your Docker Compose, Kubernetes manifest, Nginx config, AWS policy, or similar]
+
+Check for:
+- Running containers or services as root
+- Exposed ports that should be internal only
+- Missing or overly permissive IAM/RBAC policies
+- Secrets stored in environment variables or plain config files
+- Missing network policies or security groups
+- Outdated or vulnerable base images
+- Missing resource limits (CPU/memory)
+- Insecure TLS configurations
+- Publicly accessible storage buckets or databases
+
+For each issue: severity, description, and remediation steps.
+```
+
+---
+
+## 9. Generate Security Regression Test Cases After a Fix
+
+```
+Generate security regression test cases to verify the following vulnerability has been correctly fixed.
+
+Vulnerability:
+[Describe the security bug — type, how it was exploited, what was changed to fix it]
+
+Write test cases that:
+- Confirm the specific attack vector no longer works
+- Test related attack variations (to ensure the fix is complete, not just patched)
+- Verify no new vulnerabilities were introduced by the fix
+- Check edge cases around the fix
+
+Include both positive tests (fix works) and negative tests (related attacks also blocked).
+```
+
+---
+
+## 10. Create a Security Test Plan for a Release
+
+```
+Create a security test plan for the following upcoming release.
+
+Release scope:
+[What is being released — new features, changes, infrastructure updates]
+
+Application type: [Web / API / Mobile]
+Risk level: [Low / Medium / High — and why]
+
+Plan should include:
+- Security testing scope and objectives
+- Types of testing to perform (SAST, DAST, manual pen test, dependency scan)
+- Tools to use (e.g. OWASP ZAP, Snyk, Semgrep, Burp Suite)
+- High-risk areas to focus on
+- Entry and exit criteria
+- Who is responsible for each activity
+- Timeline and effort estimate
+- Sign-off requirements
+```

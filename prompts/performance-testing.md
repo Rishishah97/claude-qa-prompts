@@ -112,3 +112,123 @@ Define:
 - Scalability expectations
 - Pass/fail criteria for performance test sign-off
 ```
+
+---
+
+## 6. Generate a Locust Load Test Script
+
+```
+Write a Locust load test script in Python for the following scenario.
+
+Endpoints to test:
+[List the endpoints, methods, and request bodies]
+
+User behaviour flow:
+[Describe the sequence of actions a virtual user should take]
+
+Load profile:
+- Users: [number]
+- Spawn rate: [users per second]
+- Duration: [minutes]
+
+Include:
+- Realistic think times between requests
+- Auth handling (login once per user, reuse token)
+- Custom success/failure conditions
+- Clean, commented Python code
+```
+
+---
+
+## 7. Analyse and Improve Slow Queries
+
+```
+Analyse the following slow database query and suggest performance improvements.
+
+Query:
+[Paste the SQL query]
+
+Context:
+- Database: [PostgreSQL / MySQL / other]
+- Table sizes: [approximate row counts]
+- Current execution time: [ms or seconds]
+- EXPLAIN output (if available): [paste here]
+
+Provide:
+- Root cause of slowness
+- Index recommendations
+- Query rewrite suggestions
+- Any schema changes that would help
+- Expected improvement after fixes
+```
+
+---
+
+## 8. Create a Capacity Planning Test Plan
+
+```
+Create a capacity planning test plan to determine the maximum load this system can handle before degrading.
+
+System:
+[Describe the application and infrastructure]
+
+Current baseline performance:
+[Any known metrics — response times, throughput, user counts]
+
+Plan should include:
+- How to establish the performance baseline
+- Step-by-step load increments to run
+- Metrics to monitor at each step (latency, CPU, memory, DB connections, error rate)
+- How to identify the saturation point
+- What degradation looks like (thresholds to watch)
+- Infrastructure scaling options to test
+- Recommendations for headroom and scaling triggers
+```
+
+---
+
+## 9. Write a Soak / Endurance Test Plan
+
+```
+Design a soak (endurance) test plan for the following application.
+
+Application:
+[Describe the app and its normal usage patterns]
+
+Soak test objectives:
+[e.g. detect memory leaks, connection pool exhaustion, disk space growth]
+
+Plan should cover:
+- Test duration (recommended minimum and maximum)
+- Load level to sustain (% of normal traffic)
+- Metrics to monitor over time (memory, heap, thread count, GC activity, DB connections)
+- Sampling intervals and alerting thresholds
+- Expected gradual degradation patterns to watch for
+- How to interpret results and identify slow leaks
+```
+
+---
+
+## 10. Document Performance Test Results
+
+```
+Write a performance test results report based on the following data.
+
+Test data / metrics:
+[Paste your raw results, graphs summary, or key numbers]
+
+Application tested:
+[Name and version]
+
+Audience for this report: [Engineering team / Stakeholders / Both]
+
+Include:
+- Executive summary (pass/fail against SLAs)
+- Test environment and configuration
+- Test scenarios run
+- Key metrics (response time percentiles, throughput, error rate)
+- Bottlenecks identified
+- Comparison to previous results (if applicable)
+- Recommendations
+- Sign-off recommendation (go / no-go)
+```

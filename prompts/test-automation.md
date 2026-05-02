@@ -121,3 +121,121 @@ Include:
 - Metrics to track (coverage, pass rate, execution time)
 - Rollout plan (phased approach)
 ```
+
+---
+
+## 6. Generate a Cypress E2E Test Suite
+
+```
+Write a Cypress end-to-end test suite for the following user journey.
+
+User Journey:
+[Describe the full flow step by step — e.g. register → verify email → login → complete profile]
+
+App URL: [base URL]
+Auth method: [how to handle login in tests]
+
+Write tests that:
+- Use cy.intercept() to stub or assert API calls where appropriate
+- Use custom commands for repeated actions (e.g. cy.login())
+- Follow the Page Object or App Actions pattern
+- Have meaningful describe/it block names
+- Run independently (no shared state between tests)
+- Include assertions on UI and network responses
+
+Output clean TypeScript code.
+```
+
+---
+
+## 7. Write a Playwright API + UI Combined Test
+
+```
+Write a Playwright test that combines API setup with UI verification for the following scenario.
+
+Scenario:
+[Describe the test — e.g. create a resource via API, then verify it appears in the UI]
+
+Base URL: [app URL]
+API endpoint: [endpoint to call for setup/teardown]
+Auth: [token or session details]
+
+The test should:
+- Use the API to set up test data (not the UI)
+- Perform UI actions to verify the feature
+- Use the API to clean up test data after the test
+- Be written in TypeScript with Playwright best practices
+
+Output the full test file.
+```
+
+---
+
+## 8. Generate a Test Data Factory
+
+```
+Create a test data factory for the following entities used in automated tests.
+
+Entities:
+[List the data models — e.g. User, Order, Product — with their key fields and types]
+
+Language / Framework: [TypeScript / Python / Java]
+
+The factory should:
+- Generate realistic random data using a library like Faker
+- Allow overrides for specific fields
+- Support creating related entities (e.g. Order with User and Products)
+- Have a clean, reusable API
+- Include examples of usage in tests
+
+Output the factory code with usage examples.
+```
+
+---
+
+## 9. Write a CI/CD Pipeline for Test Automation
+
+```
+Write a CI/CD pipeline configuration to run the following test suite automatically.
+
+Test suite:
+[Describe the tests — type, framework, language, approximate count]
+
+CI tool: [GitHub Actions / GitLab CI / CircleCI / Jenkins]
+Trigger: [on PR / on merge to main / scheduled / all of the above]
+
+Pipeline should:
+- Install dependencies and cache them
+- Run linting and type checks before tests
+- Run tests in parallel where possible
+- Generate and publish a test report
+- Fail the build on test failures
+- Send a notification on failure (Slack / email)
+- Run a subset of tests on PR and full suite on merge
+
+Output the complete pipeline YAML.
+```
+
+---
+
+## 10. Audit a Test Suite for Coverage Gaps
+
+```
+Audit the following test suite and identify coverage gaps.
+
+Existing tests:
+[Paste a list or summary of your current automated tests]
+
+Application features:
+[List the key features and user journeys of the application]
+
+Identify:
+- Features with no automated test coverage
+- User journeys only partially covered
+- Missing negative and error path tests
+- Integration points not covered
+- Tests that duplicate each other (candidates for removal)
+- Recommended priority order for filling gaps
+
+Output a gap analysis table and a prioritised action plan.
+```
